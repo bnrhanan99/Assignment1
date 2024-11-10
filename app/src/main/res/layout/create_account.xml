@@ -5,16 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="380dp"
     android:layout_height="800dp"
-    android:background="#FCFCFC"
+    style="@style/MainConstraintLayout"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/vector"
-        android:layout_width="321dp"
-        android:layout_height="251dp"
         android:layout_marginStart="62dp"
         android:layout_marginTop="25dp"
-        android:scaleType="center"
+        style="@style/ImageViewStyle"
         android:src="@drawable/vector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,14 +20,10 @@
 
     <TextView
         android:id="@+id/GetStarted"
-        android:layout_width="210dp"
-        android:layout_height="44dp"
+        style="@style/GetStartedText"
         android:layout_marginStart="67dp"
         android:layout_marginTop="159dp"
-        android:gravity="center"
         android:text="@string/get_started"
-        android:textColor="#252525"
-        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,25 +31,21 @@
         android:id="@+id/access"
         android:layout_width="183dp"
         android:layout_height="17dp"
+        style="@style/SubtitleText"
         android:layout_marginStart="78dp"
         android:layout_marginTop="203dp"
-        android:gravity="center"
         android:text="@string/by_creating_a_free_account"
-        android:textColor="#252525"
-        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/full_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/InputFieldStyle"
         android:layout_marginStart="30dp"
         android:layout_marginTop="256dp"
+        app:endIconDrawable="@drawable/user"
+        app:endIconMode="custom"
         android:hint="@string/full_name"
-        android:background="#CCCCCC"
-        android:textColor="#000000"
-        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@id/GetStarted">
@@ -66,14 +56,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/valid_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/InputFieldStyle"
         android:layout_marginStart="30dp"
         android:layout_marginTop="325dp"
         android:hint="@string/valid_email"
-        android:background="#CCCCCC"
-        android:textColor="#000000"
-        android:textSize="12sp"
+        app:endIconDrawable="@drawable/mail"
+        app:endIconMode="custom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@id/full_name">
@@ -84,14 +72,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/phone_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/InputFieldStyle"
         android:layout_marginStart="30dp"
         android:layout_marginTop="394dp"
         android:hint="@string/phone_number"
-        android:background="#CCCCCC"
-        android:textColor="#000000"
-        android:textSize="12sp"
+        app:endIconDrawable="@drawable/smartphone"
+        app:endIconMode="custom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@id/valid_email">
@@ -102,14 +88,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/strong_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/InputFieldStyle"
         android:layout_marginStart="30dp"
         android:layout_marginTop="463dp"
         android:hint="@string/strong_password"
-        android:background="#CCCCCC"
-        android:textColor="#000000"
-        android:textSize="12sp"
+        app:endIconDrawable="@drawable/lock"
+        app:endIconMode="custom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@id/phone_number">
@@ -120,8 +104,7 @@
 
     <CheckBox
         android:id="@+id/remember_me"
-        android:layout_width="17dp"
-        android:layout_height="27dp"
+        style="@style/CheckboxStyle"
         android:layout_marginTop="530dp"
         android:layout_marginStart="41dp"
         android:text=""
@@ -135,11 +118,10 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="12dp"
+        style="@style/OtherBlackText"
         android:layout_marginStart="60dp"
         android:layout_marginTop="532dp"
         android:text="@string/by_checking_the_box_you_agree_to_our"
-        android:textColor="#252525"
-        android:textSize="9sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -151,8 +133,7 @@
         android:layout_marginTop="532dp"
         android:layout_marginEnd="4dp"
         android:text="@string/terms"
-        android:textColor="#6C63FF"
-        android:textSize="9sp"
+        style="@style/OtherPurpleText"
         app:layout_constraintEnd_toStartOf="@+id/and_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -164,8 +145,7 @@
         android:layout_marginStart="240dp"
         android:layout_marginTop="532dp"
         android:text="@string/and"
-        android:textColor="#252525"
-        android:textSize="9sp"
+        style="@style/OtherBlackText"
         app:layout_constraintEnd_toStartOf="@+id/conditions"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -175,32 +155,25 @@
         android:layout_width="0dp"
         android:layout_height="12dp"
         android:text="@string/conditions"
-        android:textColor="#6C63FF"
-        android:textSize="9sp"
+        style="@style/OtherPurpleText"
         android:layout_marginStart="260dp"
         android:layout_marginTop="532dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/next_button"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
+        style="@style/NextButtonStyle"
         android:layout_marginTop="668dp"
-        android:background="#6C63FF"
         android:text="@string/next"
-        android:textColor="#FCFCFC"
-        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/already_a_member"
-        android:layout_width="120dp"
-        android:layout_height="19dp"
+        style="@style/AlreadyMemberText"
         android:text="@string/already_a_member"
-        android:textSize="13sp"
-        android:textColor="#252525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="743dp"
@@ -209,11 +182,8 @@
 
     <TextView
         android:id="@+id/login"
-        android:layout_width="50dp"
-        android:layout_height="19dp"
+        style="@style/LoginText"
         android:text="@string/log_in"
-        android:textColor="#6C63FF"
-        android:textSize="13sp"
         app:layout_constraintStart_toEndOf="@id/already_a_member"
         app:layout_constraintTop_toTopOf="@id/already_a_member"
         android:layout_marginStart="8dp" />
